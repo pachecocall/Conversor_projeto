@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Goodstuff-No-Nonsense-Free-Space-Earth.ico" type="image/x-icon">
+    <title>Conversor de bases</title>
+    <link rel="stylesheet" href="css_conversor.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="container">
+        <header class="header">
+            <h2>CONVERSOR DE BASES NÚMERICAS</h2>
+        </header>
+        <div class="box-form">
+            <form>
+                <!-- SELECT PARA ESCOLHER  O TIPO DE BASE CONVERTIDA-->
+                <label for="tipos_bases">selecione uma base</label>
+                <select id="tipos_bases" onchange="habi_desabi(this.value)">
+                    <option value="0" selected>--</option>
+                    <option value="10">decimal</option>
+                    <option value="2">binário</option>
+                    <option value="8">octal</option>
+                    <option value="16">hexadecimal</option>
+                </select>
+
+                <!--entrada do valor decimal-->
+                <label for="ipt_decimal">decimal</label>
+                <input type="text" id="ipt_decimal" onkeypress="return type_decimal(event);" disabled />
+
+                <!--entrada binária-->
+                <label for="ipt_binario">binário</label>
+                <input type="text" id="ipt_binario" onkeypress="return type_binario(event);" disabled>
+
+                <!--entrada octal-->
+                <label for="ipt_octal">octal</label>
+                <input type="text" id="ipt_octal" onkeypress="return type_octal(event);" disabled>
+
+                <!--entrada hexadecimal-->
+                <label for="ipt_hexadecimal">hexadecimal</label>
+                <input type="text" id="ipt_hexadecimal" onkeypress="return type_hexadecimal(event);" disabled>
+
+                <div class="container-btn">
+                    <!--BOTÃO PARA EXECULTAR-->
+                    <button type="button" onclick="chamar_calculo();">Converter</button>
+
+
+                    <!--BOTÃO PARA LIMPAR OS DADOS INSERIDOS NO FORMÚLARIO-->
+                    <input type="reset" class="input-limpar" value="Limpar" onclick="habi_desabi()">
+                </div>
+            </form>
+        </div>
+        <!--FIM DO FORMÚLARIO DO BROWSER-->
+        <footer>
+            <p class="footer-text">Todos os direitos reservados | Carlos Pacheco</p>
+        </footer>
+    </div>
+</body>
+
+</html>
